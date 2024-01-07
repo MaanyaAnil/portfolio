@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="/HTML/sports code/CSS/add_to_cart.css">
+    <script src="/HTML/sports code/JS/add_to_cart.js"></script>
+</head>
+<body>
+    <!-- Your HTML code goes here -->
+
+    <div class="section" id="testimonial">
+        <center>
+            <h1>PLACE MY ORDER</h1>
+            <h3>Please place your order here</h3>
+        </center>
+        <br>
+        <form id="feedbackForm" style="background-color: lightgray;">
+            <table>
+                <tr>
+                    <td style="width: 50%;"><label for="batType">Bats:</label>
+                        <select id="batType" name="batType">
+                            <option value="5">Table Tennis</option>
+                            <option value="4">Badminton Racquet</option>
+                            <option value="3">Tennis</option>
+                            <option value="2">Golf Stick</option>
+                            <option value="1">Hockey</option>
+                            <option value="none">none </option>
+                        </select>
+                    </td>
+                    <td style="width: 50%;"><label for="batQuantity">Quantity:</label>
+                        <select id="batQuantity" name="batQuantity">
+                            <option value="5">5 </option>
+                            <option value="4">4 </option>
+                            <option value="3">3 </option>
+                            <option value="2">2 </option>
+                            <option value="1">1 </option>
+                            <option value="none">none </option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                  <td><label for="name">Balls:</label>
+                  
+                  <select id="name" name="name">
+                    <option value="5">Basketball</option>
+                   <option value="4">Football</option>
+                   <option value="5">Table Tennis</option>
+                   <option value="4">Badminton Shuttle</option>
+                   <option value="3">Tennis</option>
+                   <option value="2">Golf</option>
+                   <option value="1">Hockey</option>
+                   <option value="none">none </option>
+                 </select></td>
+                  <td><label for="email">Quantity:</label>
+                   <select id="email" name="email">
+                   <option value="5">5 </option>
+                   <option value="4">4 </option>
+                   <option value="3">3 </option>
+                   <option value="2">2 </option>
+                   <option value="1">1 </option>
+                   <option value="none">none </option>
+                 </select></td>
+                </tr>
+                
+                <tr>            
+                <td><label for="rating">Others:</label>
+                  <select id="rating" name="rating">
+                   <option value="5">Shirts</option>
+                   <option value="4">Shorts</option>
+                   <option value="3">Shoes</option>
+                   <option value="2">Sweatbands</option>
+                   <option value="1">Socks</option>
+                   <option value="none">none </option>
+                  </select></td>
+                <td><label for="email">Quantity:</label>
+                 <select id="email" name="email">
+                  <option value="5">5 </option>
+                  <option value="4">4 </option>
+                  <option value="3">3 </option>
+                  <option value="2">2 </option>
+                  <option value="1">1 </option>
+                  <option value="none">none </option>
+                 </select></td>
+                </tr>
+
+                <!-- Other rows... -->
+
+            </table>
+            <button id="placeOrderBtn" type="button">PLACE THE ORDER</button>
+        </form>
+    </div>
+
+    <!-- Popup for order success message -->
+    <div id="orderSuccessPopup">
+        <p>Your order is placed!
+            The payment Details have been sent to your email. Please make the payment to confirm your order.
+            THANK YOU!
+        </p>
+        <button onclick="location.href='/HTML/sports code/HTML/sports.html'">OK</button>
+    </div>
+
+    <script>
+        document.getElementById("placeOrderBtn").addEventListener("click", function() {
+    document.getElementById("orderSuccessPopup").style.display = "block";
+});
+
+function redirectToShop() {
+    // Redirect to "sports.html"
+    window.location.href = 'sports.html';
+}
+    </script>
+</body>
+</html>

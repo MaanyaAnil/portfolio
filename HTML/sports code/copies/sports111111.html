@@ -1,0 +1,177 @@
+<html>
+<head>
+  <title>Easy Sports Shop</title>
+  <style>
+    /* Add your CSS code here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .nav {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav li {
+      margin-left: 20px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .nav a:hover {
+      color: #f00;
+    }
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+
+    .card {
+      width: 300px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 0;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: normal;
+      color: #333;
+    }
+
+    .card p {
+      margin: 0;
+      padding: 10px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .card button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #f00;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background-color: #c00;
+    }
+
+    .footer {
+      padding: 20px;
+      background-color: #f0f0f0;
+      text-align: center;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">Easy Sports Shop</div>
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <!-- Add your HTML code here -->
+      <div class="card">
+        <img src="basketball.jpg" alt="Basketball">
+        <h3>Basketball</h3>
+        <p>Price: $20</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="football.jpg" alt="Football">
+        <h3>Football</h3>
+        <p>Price: $25</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="tennis.jpg" alt="Tennis">
+        <h3>Tennis</h3>
+        <p>Price: $15</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="badminton.jpg" alt="Badminton">
+        <h3>Badminton</h3>
+        <p>Price: $10</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="cricket.jpg" alt="Cricket">
+        <h3>Cricket</h3>
+        <p>Price: $30</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="golf.jpg" alt="Golf">
+        <h3>Golf</h3>
+        <p>Price: $40</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <div class="footer">
+      <p>© 2024 Easy Sports Shop. All rights reserved.</p>
+    </div>
+  </div>
+  <script>
+    // Add your JavaScript code here
+    // Get all the buttons
+    var buttons = document.querySelectorAll(".card button");
+
+    // Loop through the buttons and add click event listener
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener("click", function() {
+        // Get the product name and price from the card
+        var name = this.parentElement.querySelector("h3").innerText;
+        var price = this.parentElement.querySelector("p").innerText;
+
+        // Display an alert message with the product details
+        alert("You have added " + name + " (" + price + ") to your cart.");
+      });
+    }
+  </script>
+</body>
+</html>

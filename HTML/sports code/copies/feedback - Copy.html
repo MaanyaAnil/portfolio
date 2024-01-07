@@ -1,0 +1,316 @@
+<html>
+<style>
+    h1{
+        background-color: #34495e;
+        font-size: 35px;
+        line-height: 80px;
+        padding: 0 30px;
+        font-weight: 700;
+    }
+/* Basic styling for the form container */
+    #feedbackForm {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 2px solid #2980b9; /* blue border */
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Styling for form headings */
+    #feedbackForm h2 {
+      color: #2980b9; 
+    }
+    
+    /* Styling for form labels */
+    #feedbackForm label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    
+    /* Styling for form input fields */
+    #feedbackForm input,
+    #feedbackForm textarea,
+    #feedbackForm select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    /* Styling for the submit button */
+    #feedbackForm button {
+      background-color: #2980b9; /* Orange button color */
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    /* Style for the thank-you message (optional) */
+    #thankYouMessage {
+      color: #008000; /* Green color for thank-you message */
+      margin-top: 10px;
+    }</style>
+
+<!-----------------FEEDBACK--------------------------------->
+          <div class="section" id="testimonial">
+            <center> <h1>FEEDBACK</h1>
+             <h3>Please give us your feedback</h3></center>
+             <br>
+             <form id="feedbackForm">
+               <label for="name">Name:</label>
+               <input type="text" id="name" name="name" required>
+             
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="email" required>
+             
+               <label for="feedback">Feedback:</label>
+               <textarea id="feedback" name="feedback" rows="4" required></textarea>
+             
+               <label for="rating">Rating:</label>
+               <select id="rating" name="rating">
+                 <option value="5">5 - Excellent</option>
+                 <option value="4">4 - Very Good</option>
+                 <option value="3">3 - Average</option>
+                 <option value="2">2 - Below Average</option>
+                 <option value="1">1 - Poor</option>
+               </select>
+             
+               <button type="submit">Submit Feedback</button>
+             </form>
+           </div>
+           <script>
+           document.getElementById("feedbackForm").addEventListener("submit", function(event) 
+            {
+            event.preventDefault();
+            
+            // Retrieve form data
+            var formData = {
+             name: document.getElementById("name").value,
+             email: document.getElementById("email").value,
+             feedback: document.getElementById("feedback").value,
+             rating: document.getElementById("rating").value
+            };
+            // Here, you can send the form data to your server using AJAX or perform other actions.
+            console.log(formData);
+            
+            // Optionally, you can display a thank-you message or redirect the user.
+            function submitClick () { 
+                if (feedback ()) { 
+                    alert ("Thank you for your time!")
+                }
+            }
+            
+            });
+            </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <style>
+        h1 {
+            background-color: #34495e;
+            font-size: 35px;
+            line-height: 80px;
+            padding: 0 30px;
+            font-weight: 700;
+            color: #fff; /* Added */
+        }
+
+        /* Basic styling for the form container */
+        #feedbackForm {
+            max-width: 500px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #2980b9; /* blue border */
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for form headings */
+        #feedbackForm h2 {
+            color: #2980b9;
+        }
+
+        /* Styling for form labels */
+        #feedbackForm label {
+            display: block;
+            margin-bottom: 8px;
+            color: #0f0e0e;
+            font-weight: bold;
+            font-size: large;
+        }
+
+        /* Styling for form input fields */
+        #feedbackForm input,
+        #feedbackForm textarea,
+        #feedbackForm select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Styling for the submit button */
+        #feedbackForm button {
+            background-color: #2980b9; /* blue button color */
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Style for the thank-you message (optional) */
+        #thankYouMessage {
+            color: #008000; /* Green color for thank-you message */
+            margin-top: 10px;
+        }
+
+        /* Added spacing */
+        table {
+            width: 100%;
+        }
+
+        table tr td {
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Your HTML code goes here -->
+
+    <div class="section" id="testimonial">
+        <center>
+            <h1>PLACE MY ORDER</h1>
+            <h3>Please place your order here</h3>
+        </center>
+        <br>
+        <form id="feedbackForm" style="background-color: lightgray;">
+            <table>
+                <tr>
+                    <td style="width: 50%;"><label for="name">Bats:</label>
+                        <select id="name" name="name">
+                            <option value="5">Table Tennis</option>
+                            <option value="4">Badminton</option>
+                            <option value="3">Tennis</option>
+                            <option value="2">Golf Stick</option>
+                            <option value="1">Hockey</option>
+                        </select>
+                    </td>
+                    <td style="width: 50%;"><label for="email">Quantity:</label>
+                        <select id="email" name="email">
+                            <option value="5">5 </option>
+                            <option value="4">4 </option>
+                            <option value="3">3 </option>
+                            <option value="2">2 </option>
+                            <option value="1">1 </option>
+                        </select>
+                    </td>
+                </tr>
+
+<tr>
+  <td><label for="name">Balls:</label>
+  
+  <select id="name" name="name">
+   <option value="5">Table Tennis</option>
+   <option value="4">Badminton</option>
+   <option value="3">Tennis</option>
+   <option value="2">Golf Stick</option>
+   <option value="1">Hockey</option>
+ </select></td>
+  <td><label for="email">Quantity:</label>
+   <select id="email" name="email">
+   <option value="5">5 </option>
+   <option value="4">4 </option>
+   <option value="3">3 </option>
+   <option value="2">2 </option>
+   <option value="1">1 </option>
+ </select></td>
+</tr>
+
+<tr>            
+<td><label for="rating">Others:</label>
+  <select id="rating" name="rating">
+   <option value="5">Shirts</option>
+   <option value="4">Shorts</option>
+   <option value="3">Shoes</option>
+   <option value="2">Sweatbands</option>
+   <option value="1">Socks</option>
+  </select></td>
+<td><label for="email">Quantity:</label>
+ <select id="email" name="email">
+  <option value="5">5 </option>
+  <option value="4">4 </option>
+  <option value="3">3 </option>
+  <option value="2">2 </option>
+  <option value="1">1 </option>
+ </select></td>
+</tr>
+</table>
+<button type="button" onclick="placeOrder()">Place My Order</button>
+             </form>
+           </div>
+           <script>
+           document.getElementById("feedbackForm").addEventListener("submit", function(event) 
+            {
+            event.preventDefault();
+            
+            // Retrieve form data
+            var formData = {
+             name: document.getElementById("name").value,
+             email: document.getElementById("email").value,
+             feedback: document.getElementById("feedback").value,
+             rating: document.getElementById("rating").value
+            };
+            // Here, you can send the form data to your server using AJAX or perform other actions.
+            console.log(formData);
+            
+            function placeOrder() {
+            // Add your logic here for handling the order submission
+            // For now, we'll use a confirm dialog
+            var isOrderPlaced = window.confirm("Are you sure you want to place your order?");
+            
+            if (isOrderPlaced) {
+                // Your logic for order placement goes here
+                alert("YOUR ORDER HAS BEEN PLACED");
+            } else {
+                // Optional: Handle the case where the user cancels the order
+                console.log("Order placement canceled");
+            }
+        }
+            
+            });

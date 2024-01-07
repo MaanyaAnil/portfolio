@@ -1,0 +1,36 @@
+<html>
+<body>
+  <link rel="stylesheet" href="/CSS/feedback.css">
+  <script src="/JAVASCRIPT/feedback.js"></script>
+<!-----------------FEEDBACK--------------------------->
+<div class="section" id="testimonial">
+  <center>
+      <h1>FEEDBACK</h1>
+      <h3>Please give me your feedback</h3>
+  </center>
+  <br>
+  <form id="feedbackForm" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="feedback">Feedback:</label>
+      <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+      <label for="rating">Rating my work:</label>
+      <select id="rating" name="rating">
+          <option value="5">5 - Excellent</option>
+          <option value="4">4 - Very Good</option>
+          <option value="3">3 - Average</option>
+          <option value="2">2 - Below Average</option>
+          <option value="1">1 - Poor</option>
+      </select>
+
+      <button type="submit">Submit Feedback</button>
+  </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+h1{
+    background-color: #34495e;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 30px;
+    font-weight: 700;
+}
+/* Basic styling for the form container */
+#feedbackForm {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #2980b9; /* blue border */
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for form headings */
+#feedbackForm h2 {
+  color: #2980b9; 
+}
+
+/* Styling for form labels */
+#feedbackForm label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Styling for form input fields */
+#feedbackForm input,
+#feedbackForm textarea,
+#feedbackForm select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Styling for the submit button */
+#feedbackForm button {
+  background-color: #2980b9; /* Orange button color */
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style for the thank-you message (optional) */
+#thankYouMessage {
+  color: #008000; /* Green color for thank-you message */
+  margin-top: 10px;
+}
